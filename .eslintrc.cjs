@@ -10,6 +10,7 @@ module.exports = {
   },
   rules: {
     "array-element-newline": ["error", "consistent"],
+    "capitalized-comments": "off",
     "function-call-argument-newline": ["error", "consistent"],
     "indent": ["error", 2],
     "no-magic-numbers": "off",
