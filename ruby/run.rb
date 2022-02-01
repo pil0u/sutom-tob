@@ -9,7 +9,8 @@ mots = File.readlines("data/mots.txt", chomp: true)
 dictionnaire = initialiser_dictionnaire(mots)
 
 # Tirage du mot
-le_mot = "PANIER" # mots.sample
+le_mot = mots.sample
+
 taille_du_mot = le_mot.length
 debut_du_mot = le_mot[0]
 puts "Mot à trouver: #{AFFICHER_LE_MOT ? le_mot : '*' * taille_du_mot}\n"
@@ -34,11 +35,11 @@ until mot_trouve
   puts "   Le mot contient :        #{contenues.join(", ")}" unless contenues.empty?
   puts ""
   puts "   #{bien_placees.join}"
-  print "##{essai} "
 
   if PROPOSITION_AUTO
     proposition = robot(propositions, mots_proposables, bien_placees, contenues, absentes, emplacements)
   else
+    print "##{essai} "
     proposition = gets.chomp.upcase
   end
 
