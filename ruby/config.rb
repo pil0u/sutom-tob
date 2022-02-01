@@ -1,0 +1,2 @@
+AFFICHER_LE_MOT = false
+PROPOSITION_AUTO = false
