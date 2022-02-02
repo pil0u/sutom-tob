@@ -19,7 +19,7 @@ def initialiser_dictionnaire(liste_mots)
   return dict
 end
 
-def valide?(mot_propose, mot_a_trouver, mots_proposables)  
+def valide?(mot_propose, mots_proposables, mot_a_trouver)  
   if mot_propose.length != mot_a_trouver.length
     puts "Tu dois proposer un mot de #{mot_a_trouver.length} lettres"
     return false
@@ -35,7 +35,7 @@ def valide?(mot_propose, mot_a_trouver, mots_proposables)
     return false
   end
 
-  return true
+  true
 end
 
 def afficher(propositions)
@@ -43,4 +43,25 @@ def afficher(propositions)
     puts "   #{proposition.chars.join(" ")}"
     puts "   #{code_resultat.join}"
   end
+end
+
+def resultat_code(proposition, le_mot, bien_placees)
+  code_resultat = []
+  lettres_du_mot = le_mot.chars
+
+  proposition.each_char.with_index do |lettre, idx|
+    if lettre == lettres_du_mot[idx]
+      code_resultat << "🟥"
+      lettres_du_mot[idx] = "#"
+
+      bien_placees[idx] = lettre if bien_placees[idx] == "."
+    elsif lettres_du_mot.include?(lettre)
+      code_resultat << "🟡"
+      lettres_du_mot[lettres_du_mot.index(lettre)] = "#"
+    else
+      code_resultat << "🟦"
+    end
+  end
+
+  code_resultat
 end
