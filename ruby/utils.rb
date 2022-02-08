@@ -41,27 +41,31 @@ end
 def afficher(propositions)
   propositions.each do |proposition, code_resultat|
     puts "   #{proposition.chars.join(" ")}"
-    puts "   #{code_resultat.join}"
+    puts "   #{code_resultat}"
   end
 end
 
 def resultat_code(proposition, le_mot, bien_placees)
-  code_resultat = []
+  code_resultat = ["🟦"] * proposition.length
   lettres_du_mot = le_mot.chars
 
   proposition.each_char.with_index do |lettre, idx|
     if lettre == lettres_du_mot[idx]
-      code_resultat << "🟥"
+      code_resultat[idx] = "🟥"
       lettres_du_mot[idx] = "#"
 
       bien_placees[idx] = lettre if bien_placees[idx] == "."
-    elsif lettres_du_mot.include?(lettre)
-      code_resultat << "🟡"
-      lettres_du_mot[lettres_du_mot.index(lettre)] = "#"
-    else
-      code_resultat << "🟦"
     end
   end
 
-  code_resultat
+  proposition.each_char.with_index do |lettre, idx|
+    next if code_resultat[idx] == "🟥"
+
+    if lettres_du_mot.include?(lettre)
+      code_resultat[idx] = "🟡"
+      lettres_du_mot[lettres_du_mot.index(lettre)] = "#"
+    end
+  end
+
+  code_resultat.join
 end
