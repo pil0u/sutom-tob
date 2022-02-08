@@ -23,8 +23,13 @@ def player_run(le_mot, les_mots_proposables)
       puts "Le mot était #{le_mot}"
       return
     end
-    
+
     # La proposition est-elle valide ?
+    if propositions.has_key?(proposition)
+      puts "Tu as déjà proposé le mot #{proposition} 🙃"
+      next
+    end
+    
     unless valide?(proposition, les_mots_proposables, le_mot)
       afficher(propositions)
       next
