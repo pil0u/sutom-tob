@@ -2,6 +2,7 @@ require_relative "bot"
 require_relative "bots/v0"
 require_relative "bots/v1"
 require_relative "bots/v2"
+require_relative "bots/v3"
 require_relative "config"
 require_relative "player"
 require_relative "utils"
@@ -34,6 +35,7 @@ when "bot"
   puts "Trouvé en #{essais} tentatives."
 
 when "benchmark"
+  # OPTIM: garder en mémoire les mots_proposables écartés
   begin
     bot = method("bot_v#{VERSION_BOT}".to_sym)
   rescue NameError
