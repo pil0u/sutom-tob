@@ -3,7 +3,7 @@ require_relative "utils"
 def player_run(le_mot, les_mots_proposables)
   taille_du_mot = le_mot.length
   debut_du_mot = le_mot[0]
-  puts "Mot à trouver: #{debut_du_mot + '*' * (taille_du_mot - 1)}\n"
+  puts "Mot à trouver: #{debut_du_mot + '*' * (taille_du_mot - 1)} (#{taille_du_mot} lettres)\n"
 
   bien_placees = [debut_du_mot] + ['.'] * (taille_du_mot - 1)
 
@@ -48,4 +48,6 @@ def player_run(le_mot, les_mots_proposables)
   end
 
   puts "Bravo ! Tu as trouvé #{le_mot} en #{essais} tentatives."
+
+  [propositions, essais]
 end
