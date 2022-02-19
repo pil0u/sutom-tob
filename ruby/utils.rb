@@ -69,3 +69,14 @@ def resultat_code(proposition, le_mot, bien_placees)
 
   code_resultat.join
 end
+
+def ligne_tableau_sutom(jour, mot, propositions_h, resultats_bots)
+  meilleur_bot = resultats_bots.min
+  essais_h = propositions_h.count
+
+  emoji = "🤖" if meilleur_bot < essais_h
+  emoji = "🕊️" if meilleur_bot == essais_h
+  emoji = "💪" if meilleur_bot > essais_h
+
+  "\n| #{format("%03d", jour)}<br>(*Twitch*) | #{emoji} | <span title=\"#{mot}\">*caché*</span> | #{propositions_h.values.join("<br>")} | #{resultats_bots.join(" | ")} |"
+end

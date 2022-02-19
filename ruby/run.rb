@@ -1,3 +1,5 @@
+require "open-uri"
+
 require_relative "bot"
 require_relative "bots/v0"
 require_relative "bots/v1"
@@ -17,6 +19,27 @@ when "player"
   mots_proposables = dictionnaire[mot.length][mot[0]]
 
   player_run(mot, mots_proposables)
+
+when "sutom"
+  puts "Grille ##{JOUR_SUTOM} de SUTOM"
+  mot = URI.parse("https://sutom.nocle.fr/mots/#{JOUR_SUTOM}.txt").read
+  mots_proposables = dictionnaire[mot.length][mot[0]]
+
+  propositions_h = player_run(mot, mots_proposables)
+
+  resultats_bots = []
+
+  (1..DERNIERE_VERSION_BOT).each do |version|
+    bot = method("bot_v#{version}".to_sym)
+    propositions, essais = bot_run(mot, mots_proposables, bot)
+
+    puts "\nbot_v#{version}"
+    afficher(propositions)
+
+    resultats_bots << essais
+  end
+
+  puts ligne_tableau_sutom(JOUR_SUTOM, mot, propositions_h, resultats_bots)
 
 when "bot"
   begin
