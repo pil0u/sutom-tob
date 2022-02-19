@@ -8,14 +8,13 @@ def player_run(le_mot, les_mots_proposables)
   bien_placees = [debut_du_mot] + ['.'] * (taille_du_mot - 1)
 
   propositions = {}
-  essais = 1
 
   while true
     # Récapitulatif des informations connues
     puts "\n   #{bien_placees.join}"
 
     # Demande du mot
-    print "##{essais} "
+    print "##{propositions.count + 1} "
     proposition = gets.chomp.upcase
 
     # Possibilité de quitter à tout moment en tapant "q"
@@ -44,10 +43,9 @@ def player_run(le_mot, les_mots_proposables)
 
     # Mise à jour du statut du jeu
     break if le_mot == proposition
-    essais += 1
   end
 
-  puts "Bravo ! Tu as trouvé #{le_mot} en #{essais} tentatives."
+  puts "Bravo ! Tu as trouvé #{le_mot} en #{propositions.count} tentatives."
 
-  [propositions, essais]
+  propositions
 end
