@@ -1,5 +1,3 @@
-require "byebug"
-
 def bot_v3(mots_proposables,
            propositions,
            positions,
