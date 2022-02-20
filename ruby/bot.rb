@@ -6,8 +6,7 @@ def bot_run(le_mot, les_mots_proposables, le_bot, limite=nil)
   taille_du_mot = le_mot.size
   debut_du_mot = le_mot[0]
 
-  positions = [Set[debut_du_mot]]
-  (taille_du_mot - 1).times { positions << Set[*("A".."Z")].clone }
+  positions = [Set[debut_du_mot]] + Array.new(taille_du_mot - 1) { Set[*("A".."Z")] }
   compteur = { debut_du_mot => 1 }
   compteur_exact = Set.new()
 
@@ -24,7 +23,7 @@ def bot_run(le_mot, les_mots_proposables, le_bot, limite=nil)
 
     # Mise à jour des informations et codage du résultat
     # OPTIM : enlever le codage du résultat (inutile en benchmark)
-    code = ["🟦"] * proposition.size
+    code = Array.new(proposition.size) { "🟦" }
     lettres_du_mot = le_mot.chars
     tmp_compteur = Hash.new(0)
 

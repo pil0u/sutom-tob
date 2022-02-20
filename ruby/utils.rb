@@ -46,7 +46,7 @@ def afficher(propositions)
 end
 
 def resultat_code(proposition, le_mot, bien_placees)
-  code_resultat = ["🟦"] * proposition.size
+  code_resultat = Array.new(proposition.size) { "🟦" }
   lettres_du_mot = le_mot.chars
 
   proposition.each_char.with_index do |lettre, idx|

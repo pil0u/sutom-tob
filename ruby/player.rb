@@ -5,7 +5,7 @@ def player_run(le_mot, les_mots_proposables)
   debut_du_mot = le_mot[0]
   puts "Mot à trouver: #{debut_du_mot + '*' * (taille_du_mot - 1)} (#{taille_du_mot} lettres)\n"
 
-  bien_placees = [debut_du_mot] + ['.'] * (taille_du_mot - 1)
+  bien_placees = [debut_du_mot] + Array.new(taille_du_mot - 1) { "." }
 
   propositions = {}
 
