@@ -3,7 +3,7 @@ require "set"
 require_relative "utils"
 
 def bot_run(le_mot, les_mots_proposables, le_bot, limite=nil)
-  taille_du_mot = le_mot.length
+  taille_du_mot = le_mot.size
   debut_du_mot = le_mot[0]
 
   positions = [Set[debut_du_mot]]
@@ -24,7 +24,7 @@ def bot_run(le_mot, les_mots_proposables, le_bot, limite=nil)
 
     # Mise à jour des informations et codage du résultat
     # OPTIM : enlever le codage du résultat (inutile en benchmark)
-    code = ["🟦"] * proposition.length
+    code = ["🟦"] * proposition.size
     lettres_du_mot = le_mot.chars
     tmp_compteur = Hash.new(0)
 

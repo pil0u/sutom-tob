@@ -2,7 +2,7 @@ def initialiser_dictionnaire(liste_mots)
   dict = {}
 
   liste_mots.each do |mot|
-    taille = mot.length
+    taille = mot.size
     premiere_lettre = mot[0]
   
     if dict.has_key?(taille)
@@ -20,8 +20,8 @@ def initialiser_dictionnaire(liste_mots)
 end
 
 def valide?(mot_propose, mots_proposables, mot_a_trouver)  
-  if mot_propose.length != mot_a_trouver.length
-    puts "Tu dois proposer un mot de #{mot_a_trouver.length} lettres"
+  if mot_propose.size != mot_a_trouver.size
+    puts "Tu dois proposer un mot de #{mot_a_trouver.size} lettres"
     return false
   end
 
@@ -46,7 +46,7 @@ def afficher(propositions)
 end
 
 def resultat_code(proposition, le_mot, bien_placees)
-  code_resultat = ["🟦"] * proposition.length
+  code_resultat = ["🟦"] * proposition.size
   lettres_du_mot = le_mot.chars
 
   proposition.each_char.with_index do |lettre, idx|
@@ -72,7 +72,7 @@ end
 
 def ligne_tableau_sutom(jour, mot, propositions_h, resultats_bots)
   meilleur_bot = resultats_bots.min
-  essais_h = propositions_h.count
+  essais_h = propositions_h.size
 
   emoji = "🤖" if meilleur_bot < essais_h
   emoji = "🕊️" if meilleur_bot == essais_h

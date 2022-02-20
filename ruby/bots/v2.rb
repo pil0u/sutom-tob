@@ -27,7 +27,7 @@ def bot_v2(mots_proposables,
     # Vérification n°4 : le mot doit contenir les lettres qu'on sait dans le mot
     lettres_infos = compteur.map { |k, v| [k] * v }.flatten
     mot.each_char do |l|
-      lettres_infos.delete_at(lettres_infos.index(l) || lettres_infos.length)
+      lettres_infos.delete_at(lettres_infos.index(l) || lettres_infos.size)
     end
     next if lettres_infos.any?
 

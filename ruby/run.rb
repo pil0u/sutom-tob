@@ -16,14 +16,14 @@ case MODE
 
 when "player"
   mot = LE_MOT ? LE_MOT : mots.sample
-  mots_proposables = dictionnaire[mot.length][mot[0]]
+  mots_proposables = dictionnaire[mot.size][mot[0]]
 
   player_run(mot, mots_proposables)
 
 when "sutom"
   puts "Grille ##{JOUR_SUTOM} de SUTOM"
   mot = URI.parse("https://sutom.nocle.fr/mots/#{JOUR_SUTOM}.txt").read
-  mots_proposables = dictionnaire[mot.length][mot[0]]
+  mots_proposables = dictionnaire[mot.size][mot[0]]
 
   propositions_h = player_run(mot, mots_proposables)
 
@@ -50,7 +50,7 @@ when "bot"
   end
 
   mot = LE_MOT ? LE_MOT : mots.sample
-  mots_proposables = dictionnaire[mot.length][mot[0]]
+  mots_proposables = dictionnaire[mot.size][mot[0]]
 
   propositions, essais = bot_run(mot, mots_proposables, bot)
 
@@ -75,12 +75,12 @@ when "benchmark"
   # benchmark = {}
 
   # mots.each do |mot|
-  #   mots_proposables = dictionnaire[mot.length][mot[0]]
+  #   mots_proposables = dictionnaire[mot.size][mot[0]]
   #   benchmark[mot] = bot_run(mot, mots_proposables, bot)
   # end
 
   # essais = benchmark.map { |k, v| v[1] }
-  # moyenne = essais.sum / essais.count.to_f
+  # moyenne = essais.sum / essais.size.to_f
 
   # puts moyenne
 
