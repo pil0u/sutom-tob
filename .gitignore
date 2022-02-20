@@ -1,4 +1,4 @@
-data/*.json
+data/**/*.json
 drafts/*
 node_modules/
 sessions/*
