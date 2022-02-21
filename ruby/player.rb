@@ -1,15 +1,17 @@
-require_relative "utils"
+# frozen_string_literal: true
+
+require_relative 'utils'
 
 def player_run(le_mot, les_mots_proposables)
   taille_du_mot = le_mot.size
   debut_du_mot = le_mot[0]
-  puts "Mot à trouver: #{debut_du_mot + '*' * (taille_du_mot - 1)} (#{taille_du_mot} lettres)\n"
+  puts "Mot à trouver: #{debut_du_mot + ('*' * (taille_du_mot - 1))} (#{taille_du_mot} lettres)\n"
 
-  bien_placees = [debut_du_mot] + Array.new(taille_du_mot - 1) { "." }
+  bien_placees = [debut_du_mot] + Array.new(taille_du_mot - 1) { '.' }
 
   propositions = {}
 
-  while true
+  loop do
     # Récapitulatif des informations connues
     puts "\n   #{bien_placees.join}"
 
@@ -18,17 +20,17 @@ def player_run(le_mot, les_mots_proposables)
     proposition = gets.chomp.upcase
 
     # Possibilité de quitter à tout moment en tapant "q"
-    if proposition == "Q"
+    if proposition == 'Q'
       puts "Le mot était #{le_mot}"
       return
     end
 
     # La proposition est-elle valide ?
-    if propositions.has_key?(proposition)
+    if propositions.key?(proposition)
       puts "Tu as déjà proposé le mot #{proposition} 🙃"
       next
     end
-    
+
     unless valide?(proposition, les_mots_proposables, le_mot)
       afficher(propositions)
       next

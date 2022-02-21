@@ -1,26 +1,28 @@
-require "open-uri"
+# frozen_string_literal: true
 
-require_relative "bot"
-require_relative "bots/v0"
-require_relative "bots/v1"
-require_relative "bots/v2"
-require_relative "bots/v3"
-require_relative "config"
-require_relative "player"
-require_relative "utils"
+require 'open-uri'
 
-mots = File.readlines("data/mots.txt", chomp: true)
+require_relative 'bot'
+require_relative 'bots/v0'
+require_relative 'bots/v1'
+require_relative 'bots/v2'
+require_relative 'bots/v3'
+require_relative 'config'
+require_relative 'player'
+require_relative 'utils'
+
+mots = File.readlines('data/mots.txt', chomp: true)
 dictionnaire = initialiser_dictionnaire(mots)
 
 case MODE
 
-when "player"
-  mot = LE_MOT ? LE_MOT : mots.sample
+when 'player'
+  mot = LE_MOT || mots.sample
   mots_proposables = dictionnaire[mot.size][mot[0]]
 
   player_run(mot, mots_proposables)
 
-when "sutom"
+when 'sutom'
   puts "Grille ##{JOUR_SUTOM} de SUTOM"
   mot = URI.parse("https://sutom.nocle.fr/mots/#{JOUR_SUTOM}.txt").read
   mots_proposables = dictionnaire[mot.size][mot[0]]
@@ -41,15 +43,16 @@ when "sutom"
 
   puts ligne_tableau_sutom(JOUR_SUTOM, mot, propositions_h, resultats_bots)
 
-when "bot"
+when 'bot'
   begin
     bot = method("bot_v#{VERSION_BOT}".to_sym)
   rescue NameError
-    puts "La version #{VERSION_BOT} du bot n'existe pas. Il faut la créer ou choisir une autre version dans le fichier config.rb"
+    puts "La version #{VERSION_BOT} du bot n'existe pas."
+    puts 'Il faut la créer ou choisir une autre version dans le fichier config.rb'
     return
   end
 
-  mot = LE_MOT ? LE_MOT : mots.sample
+  mot = LE_MOT || mots.sample
   mots_proposables = dictionnaire[mot.size][mot[0]]
 
   propositions, essais = bot_run(mot, mots_proposables, bot)
@@ -57,16 +60,17 @@ when "bot"
   afficher(propositions)
   puts "Trouvé en #{essais} tentatives."
 
-when "benchmark"
+when 'benchmark'
   # OPTIM: garder en mémoire les mots_proposables écartés
   begin
     bot = method("bot_v#{VERSION_BOT}".to_sym)
   rescue NameError
-    puts "La version #{VERSION_BOT} du bot n'existe pas. Il faut la créer ou choisir une autre version dans le fichier config.rb"
+    puts "La version #{VERSION_BOT} du bot n'existe pas."
+    puts 'Il faut la créer ou choisir une autre version dans le fichier config.rb'
     return
   end
 
-  puts "TODO"
+  puts 'TODO'
 
   # if ECHANTILLON_MOTS
   #   mots = File.readlines(ECHANTILLON_MOTS, chomp: true)

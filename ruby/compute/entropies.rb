@@ -1,8 +1,10 @@
-require "json"
-require_relative "../utils"
+# frozen_string_literal: true
+
+require 'json'
+require_relative '../utils'
 
 (6..9).each do |n|
-  %w(A B C D E F G H I J L M N O P R S T U V).each do |l|
+  %w[A B C D E F G H I J L M N O P R S T U V].each do |l|
     niveau = "#{n}#{l}"
 
     liste = File.readlines("data/#{n}#{l}/liste.txt", chomp: true)
@@ -11,7 +13,7 @@ require_relative "../utils"
     taille = liste.size.to_f
     compteurs = {}
 
-    matrice.each_with_index do |row, i|
+    matrice.each do |row|
       row.each_with_index do |value, j|
         proposition = liste[j]
 
@@ -21,11 +23,11 @@ require_relative "../utils"
     end
 
     entropies = compteurs
-                  .map { |mot, h| [mot, h.map { |_, compte| compte/taille }.sum { |i| i * Math.log2(1/i) }] }
-                  .sort_by { |_, e| -e }
-                  .to_h
+                .map { |mot, h| [mot, h.map { |_, compte| compte / taille }.sum { |i| i * Math.log2(1 / i) }] }
+                .sort_by { |_, e| -e }
+                .to_h
 
-    File.open("data/#{niveau}/entropies.json", "w") do |f|
+    File.open("data/#{niveau}/entropies.json", 'w') do |f|
       JSON.dump(entropies, f)
     end
 

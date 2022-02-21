@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Ce script calcule et stocke au format JSON les résultats de chaque
 # mot vs toutes les propositions possibles, sous forme d'une matrice.
 #
@@ -14,11 +16,11 @@
 #   => 110102
 #   => 335
 
-require "fileutils"
-require "json"
-require_relative "../utils"
+require 'fileutils'
+require 'json'
+require_relative '../utils'
 
-mots = File.readlines("data/mots.txt", chomp: true)
+mots = File.readlines('data/mots.txt', chomp: true)
 dictionnaire = initialiser_dictionnaire(mots)
 
 dictionnaire.each do |taille_mot, v|
@@ -32,7 +34,6 @@ dictionnaire.each do |taille_mot, v|
 
     sous_dictionnaire.each_with_index do |mot, idx_mot|
       sous_dictionnaire.each_with_index do |proposition, idx_proposition|
-
         resultat = Array.new(proposition.size, 0)
         lettres_du_mot = mot.chars
         indices_restants = []
@@ -40,29 +41,27 @@ dictionnaire.each do |taille_mot, v|
         proposition.each_char.with_index do |lettre, idx|
           if lettre == lettres_du_mot[idx]
             resultat[idx] = 2
-            lettres_du_mot[idx] = "#"
+            lettres_du_mot[idx] = '#'
           else
             indices_restants << idx
           end
         end
 
         indices_restants.each do |idx|
-          if lettres_du_mot.include?(proposition[idx])
-            resultat[idx] = 1
-          end
+          resultat[idx] = 1 if lettres_du_mot.include?(proposition[idx])
         end
 
-        trinaire_decimal = resultat.reverse.reduce { |a, b| a*3 + b }
+        trinaire_decimal = resultat.reverse.reduce { |a, b| (a * 3) + b }
 
         matrice[idx_mot][idx_proposition] = trinaire_decimal
       end
     end
 
-    File.open("data/#{niveau}/liste.txt", "w") do |f| 
-      f.puts(sous_dictionnaire) 
-    end 
+    File.open("data/#{niveau}/liste.txt", 'w') do |f|
+      f.puts(sous_dictionnaire)
+    end
 
-    File.open("data/#{niveau}/matrice.json", "w") do |f|
+    File.open("data/#{niveau}/matrice.json", 'w') do |f|
       JSON.dump(matrice, f)
     end
 
