@@ -44,6 +44,8 @@ Les scores sont en **gras\*** avec astérisque si le solveur a battu l'humain (v
 
 | Jour | Vainqueur | Mot | Performance humaine | v1 | v2 | v3 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 045 | 🕊️ | <span title="ADULTE">*caché*</span> | 🟥🟦🟦🟡🟥🟦<br>🟥🟦🟥🟦🟥🟥<br>🟥🟥🟥🟥🟥🟥 | 4 | 3 | 4 |
+| 044 | 💪 | <span title="TABOURET">*caché*</span> | 🟥🟡🟦🟥🟦🟡🟡🟦<br>🟥🟥🟥🟥🟥🟥🟥🟥 | 3 | 3 | 3 |
 | 043 | 🤖 | <span title="CLICHE">*caché*</span> | 🟥🟦🟦🟦🟡🟦<br>🟥🟦🟡🟦🟡🟦<br>🟥🟥🟥🟦🟦🟥<br>🟥🟥🟥🟥🟥🟥 | 6 | 4 | **3\*** |
 | 042 | 🕊️ | <span title="MITONNER">*caché*</span> | 🟥🟥🟡🟡🟡🟦🟦🟦<br>🟥🟥🟥🟥🟥🟥🟥🟥 | 7 | 4 | 2 |
 | 041 | 🤖 | <span title="DOPAGE">*caché*</span> | 🟥🟦🟦🟦🟡🟦<br>🟥🟡🟦🟥🟦🟦<br>🟥🟥🟦🟥🟦🟥<br>🟥🟥🟥🟥🟥🟥 | 7 | **3\*** | **3\*** |
@@ -87,7 +89,7 @@ Les scores sont en **gras\*** avec astérisque si le solveur a battu l'humain (v
 
 | 💪 | 🤖 | 🕊️ |
 | :---: | :---: | :---: |
-| 9 | 12 | 14 |
+| 10 | 12 | 17 |
 
 
 ## Benchmark
@@ -117,13 +119,13 @@ Les scores sont en **gras\*** avec astérisque si le solveur a battu l'humain (v
 
 ## Prochaines étapes
 
-- [ ] Benchmarker _efficacement_ (mémoïsation ?) les différentes versions du solveur et archiver les résultats
-- [ ] Stocker les résultats des benchmarks dans des fichiers (YAML, JSON...) ([exemple](https://stackoverflow.com/questions/30718214/saving-hashes-to-file-on-ruby)) 
-- [ ] Stocker les calculs d'entropie
+- [ ] Modifier le `run` des bots (et du player) pour charger la matrice au début : plus besoin de calculer !
 - [ ] Créer une version qui utilise les calculs d'entropie
-- [ ] Créer une extension de navigateur qui résout le mot SUTOM du jour avec notre meilleure version
+- [ ] Benchmarker _efficacement_ (mémoïsation ?) les différentes versions du solveur et archiver les résultats
 - [ ] Compléter la partie Usage du README
+- [ ] Stocker les résultats des benchmarks dans des fichiers (YAML, JSON...) ([exemple](https://stackoverflow.com/questions/30718214/saving-hashes-to-file-on-ruby))
 - [ ] Ajouter les versions (Ruby, Node) utilisées
+- [ ] Créer une extension de navigateur qui résout le mot SUTOM du jour avec notre meilleure version
 
 <span hidden>(idée) Stream automatique de Motus - intelligence collective vs robot</span>
 
