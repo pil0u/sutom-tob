@@ -44,6 +44,7 @@ Les scores sont en **gras\*** avec astérisque si le solveur a battu l'humain (v
 
 | Jour | Vainqueur | Mot | Performance humaine | v1 | v2 | v3 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 047 | 💪 | <span title="FRANGLAIS">*caché*</span> | 🟥🟦🟦🟡🟦🟦🟦🟥🟦<br>🟥🟥🟥🟥🟥🟥🟥🟥🟥 | 6 | 3 | 3 |
 | 046 | 💪 | <span title="SACOCHE">*caché*</span> | 🟥🟡🟦🟦🟦🟡🟦<br>🟥🟥🟥🟥🟥🟥🟥 | 6 | 4 | 4 |
 | 045 | 🕊️ | <span title="ADULTE">*caché*</span> | 🟥🟦🟦🟡🟥🟦<br>🟥🟦🟥🟦🟥🟥<br>🟥🟥🟥🟥🟥🟥 | 4 | 3 | 4 |
 | 044 | 💪 | <span title="TABOURET">*caché*</span> | 🟥🟡🟦🟥🟦🟡🟡🟦<br>🟥🟥🟥🟥🟥🟥🟥🟥 | 3 | 3 | 3 |
@@ -94,7 +95,7 @@ Les scores sont en **gras\*** avec astérisque si le solveur a battu l'humain (v
 
 | 💪 | 🤖 | 🕊️ |
 | :---: | :---: | :---: |
-| 14 | 12 | 18 |
+| 15 | 12 | 18 |
 
 
 ## Benchmark
