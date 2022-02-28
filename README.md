@@ -47,8 +47,8 @@ Les scores sont en **gras\*** avec astérisque si le solveur a battu l'humain (v
 | 052 | 🕊️ | <span title="LEGUME">*caché*</span> | 🟥🟡🟦🟦🟦🟥<br>🟥🟦🟦🟡🟡🟥<br>🟥🟥🟥🟥🟥🟥 | 6 | 4 | 3 |
 | 051 | 💪 | <span title="BRILLANT">*caché*</span> | 🟥🟡🟡🟦🟦🟦🟥🟥<br>🟥🟥🟥🟥🟥🟥🟥🟥 | 6 | 5 | 4 |
 | 050 | 🕊️ | <span title="GENCIVE">*caché*</span> | 🟥🟦🟦🟦🟦🟡🟦<br>🟥🟥🟥🟡🟦🟦🟦<br>🟥🟥🟥🟥🟥🟥🟥 | 6 | 3 | 3 |
-| 049 | 🕊️ | <span title="EXAMEN">*caché*</span> | 🟥🟡🟦🟦🟦🟦<br>🟥🟡🟦🟡🟡🟡<br>🟥🟡🟥🟡🟥🟦<br>🟥🟥🟥🟥🟥🟥 | 9 | 5 | 5 |
-| 048 | 🤖 | <span title="MYSTERE">*caché*</span> | 🟥🟦🟦🟦🟡🟡🟡<br>🟥🟦🟡🟥🟥🟦🟡<br>🟥🟥🟥🟥🟥🟥🟥 | 4 | 3 | 2 |
+| 049 | 💪 | <span title="EXAMEN">*caché*</span> | 🟥🟡🟦🟦🟦🟦<br>🟥🟡🟦🟡🟡🟡<br>🟥🟡🟥🟡🟥🟦<br>🟥🟥🟥🟥🟥🟥 | 9 | 5 | 5 |
+| 048 | 🤖 | <span title="MYSTERE">*caché*</span> | 🟥🟦🟦🟦🟡🟡🟡<br>🟥🟦🟡🟥🟥🟦🟡<br>🟥🟥🟥🟥🟥🟥🟥 | 4 | 3 | **2\*** |
 | 047 | 💪 | <span title="FRANGLAIS">*caché*</span> | 🟥🟦🟦🟡🟦🟦🟦🟥🟦<br>🟥🟥🟥🟥🟥🟥🟥🟥🟥 | 6 | 3 | 3 |
 | 046 | 💪 | <span title="SACOCHE">*caché*</span> | 🟥🟡🟦🟦🟦🟡🟦<br>🟥🟥🟥🟥🟥🟥🟥 | 6 | 4 | 4 |
 | 045 | 🕊️ | <span title="ADULTE">*caché*</span> | 🟥🟦🟦🟡🟥🟦<br>🟥🟦🟥🟦🟥🟥<br>🟥🟥🟥🟥🟥🟥 | 4 | 3 | 4 |
@@ -100,7 +100,7 @@ Les scores sont en **gras\*** avec astérisque si le solveur a battu l'humain (v
 
 | 💪 | 🤖 | 🕊️ |
 | :---: | :---: | :---: |
-| 16 | 13 | 21 |
+| 17 | 13 | 20 |
 
 
 ## Benchmark
