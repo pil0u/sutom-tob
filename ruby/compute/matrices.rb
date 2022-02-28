@@ -18,18 +18,20 @@
 
 require 'fileutils'
 require 'json'
+require 'parallel'
 require_relative '../utils'
 
 mots = File.readlines('data/mots.txt', chomp: true)
 dictionnaire = initialiser_dictionnaire(mots)
 
+# OPTIM: trier les niveaux par taille décroissante pour la parallélisation
 dictionnaire.each do |taille_mot, v|
-  v.each do |premiere_lettre, sous_dictionnaire|
-    taille_dictionnaire = sous_dictionnaire.size.to_f
-
+  Parallel.each(v) do |premiere_lettre, sous_dictionnaire|
     niveau = "#{taille_mot}#{premiere_lettre}"
+    puts "#{niveau} - started..."
     FileUtils.mkdir_p("data/#{niveau}")
 
+    taille_dictionnaire = sous_dictionnaire.size.to_f
     matrice = Array.new(taille_dictionnaire) { Array.new(taille_dictionnaire) }
 
     sous_dictionnaire.each_with_index do |mot, idx_mot|
@@ -50,10 +52,10 @@ dictionnaire.each do |taille_mot, v|
 
         # 2ème passe sur les lettres autres que bien placées
         indices_restants.each do |idx|
-          if lettres_du_mot.include?(proposition[idx])
-            resultat[idx] = 1
-            lettres_du_mot[idx] = '#'
-          end
+          next unless lettres_du_mot.include?(proposition[idx])
+
+          resultat[idx] = 1
+          lettres_du_mot[lettres_du_mot.index(proposition[idx])] = '#'
         end
 
         trinaire_decimal = resultat.reverse.reduce { |a, b| (a * 3) + b }
