@@ -19,7 +19,9 @@ case MODE
 when 'sutom'
   puts "Grille ##{JOUR_SUTOM} de SUTOM"
   mot = URI.parse("https://sutom.nocle.fr/mots/#{JOUR_SUTOM}.txt").read
-  mots_proposables = dictionnaire[mot.size][mot[0]]
+
+  matrice = JSON.load_file("data/#{mot.size}#{mot[0]}/matrice.json")
+  mots_proposables = File.readlines("data/#{mot.size}#{mot[0]}/liste.txt", chomp: true)
 
   propositions_h = player_run(mot, mots_proposables)
 
@@ -27,12 +29,12 @@ when 'sutom'
 
   (1..DERNIERE_VERSION_BOT).each do |version|
     bot = method("bot_v#{version}".to_sym)
-    propositions, essais = bot_run(mot, mots_proposables, bot)
+    propositions = bot_run(mot, mots_proposables, matrice, bot)
 
     puts "\nbot_v#{version}"
     afficher(propositions)
 
-    resultats_bots << essais
+    resultats_bots << propositions.size
   end
 
   puts ligne_tableau_sutom(JOUR_SUTOM, mot, propositions_h, resultats_bots)

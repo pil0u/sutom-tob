@@ -46,7 +46,7 @@ def bot_run(le_mot, les_mots_proposables, la_matrice, le_bot, limite = nil)
     end
 
     compteur = compteur.merge(tmp_compteur) { |_k, v1, v2| [v1, v2].max }
-    propositions[proposition] = codage(trinaire_pur)
+    propositions[proposition] = codage(trinaire)
 
     break if limite && propositions.size == limite
   end

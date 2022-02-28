@@ -4,7 +4,7 @@ MODE = 'player' # ['sutom', 'player', 'bot', 'benchmark']
 
 # sutom
 DERNIERE_VERSION_BOT = 3
-JOUR_SUTOM = 47
+JOUR_SUTOM = 52
 
 # player | bot
 LE_MOT = nil # 'GARAGE'

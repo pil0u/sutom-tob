@@ -44,6 +44,11 @@ Les scores sont en **gras\*** avec astérisque si le solveur a battu l'humain (v
 
 | Jour | Vainqueur | Mot | Performance humaine | v1 | v2 | v3 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 052 | 🕊️ | <span title="LEGUME">*caché*</span> | 🟥🟡🟦🟦🟦🟥<br>🟥🟦🟦🟡🟡🟥<br>🟥🟥🟥🟥🟥🟥 | 6 | 4 | 3 |
+| 051 | 💪 | <span title="BRILLANT">*caché*</span> | 🟥🟡🟡🟦🟦🟦🟥🟥<br>🟥🟥🟥🟥🟥🟥🟥🟥 | 6 | 5 | 4 |
+| 050 | 🕊️ | <span title="GENCIVE">*caché*</span> | 🟥🟦🟦🟦🟦🟡🟦<br>🟥🟥🟥🟡🟦🟦🟦<br>🟥🟥🟥🟥🟥🟥🟥 | 6 | 3 | 3 |
+| 049 | 🕊️ | <span title="EXAMEN">*caché*</span> | 🟥🟡🟦🟦🟦🟦<br>🟥🟡🟦🟡🟡🟡<br>🟥🟡🟥🟡🟥🟦<br>🟥🟥🟥🟥🟥🟥 | 9 | 5 | 5 |
+| 048 | 🤖 | <span title="MYSTERE">*caché*</span> | 🟥🟦🟦🟦🟡🟡🟡<br>🟥🟦🟡🟥🟥🟦🟡<br>🟥🟥🟥🟥🟥🟥🟥 | 4 | 3 | 2 |
 | 047 | 💪 | <span title="FRANGLAIS">*caché*</span> | 🟥🟦🟦🟡🟦🟦🟦🟥🟦<br>🟥🟥🟥🟥🟥🟥🟥🟥🟥 | 6 | 3 | 3 |
 | 046 | 💪 | <span title="SACOCHE">*caché*</span> | 🟥🟡🟦🟦🟦🟡🟦<br>🟥🟥🟥🟥🟥🟥🟥 | 6 | 4 | 4 |
 | 045 | 🕊️ | <span title="ADULTE">*caché*</span> | 🟥🟦🟦🟡🟥🟦<br>🟥🟦🟥🟦🟥🟥<br>🟥🟥🟥🟥🟥🟥 | 4 | 3 | 4 |
@@ -95,7 +100,7 @@ Les scores sont en **gras\*** avec astérisque si le solveur a battu l'humain (v
 
 | 💪 | 🤖 | 🕊️ |
 | :---: | :---: | :---: |
-| 15 | 12 | 18 |
+| 16 | 13 | 21 |
 
 
 ## Benchmark
@@ -125,7 +130,7 @@ Les scores sont en **gras\*** avec astérisque si le solveur a battu l'humain (v
 
 ## Prochaines étapes
 
-- [ ] Modifier le `run` des bots (et du player) pour charger la matrice au début : plus besoin de calculer !
+- [x] Modifier le `run` des bots (et du player) pour charger la matrice au début : plus besoin de calculer !
 - [ ] Créer une version qui utilise les calculs d'entropie
 - [ ] Benchmarker _efficacement_ (mémoïsation ?) les différentes versions du solveur et archiver les résultats
 - [ ] Compléter la partie Usage du README
