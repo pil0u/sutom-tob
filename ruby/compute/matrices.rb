@@ -38,6 +38,7 @@ dictionnaire.each do |taille_mot, v|
         lettres_du_mot = mot.chars
         indices_restants = []
 
+        # 1ère passe sur toutes les lettres pour trouver les bien placées
         proposition.each_char.with_index do |lettre, idx|
           if lettre == lettres_du_mot[idx]
             resultat[idx] = 2
@@ -47,8 +48,12 @@ dictionnaire.each do |taille_mot, v|
           end
         end
 
+        # 2ème passe sur les lettres autres que bien placées
         indices_restants.each do |idx|
-          resultat[idx] = 1 if lettres_du_mot.include?(proposition[idx])
+          if lettres_du_mot.include?(proposition[idx])
+            resultat[idx] = 1
+            lettres_du_mot[idx] = '#'
+          end
         end
 
         trinaire_decimal = resultat.reverse.reduce { |a, b| (a * 3) + b }
