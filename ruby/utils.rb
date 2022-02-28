@@ -87,3 +87,15 @@ def ligne_tableau_sutom(jour, mot, propositions_h, resultats_bots)
 
   ["\n", f_jour, emoji, f_spoiler, f_propositions_h, f_resultats_bots, "\n"].join(' | ')
 end
+
+def trinaire_pur(trinaire_decimal, taille_mot)
+  trinaire = trinaire_decimal.digits(3)
+
+  (0..taille_mot - 1).map { |i| trinaire[i] || 0 }
+end
+
+def codage(trinaire_pur)
+  decodeur = ['🟦', '🟡', '🟥']
+
+  trinaire_pur.map { |i| decodeur[i] }.join
+end

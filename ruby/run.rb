@@ -16,12 +16,6 @@ dictionnaire = initialiser_dictionnaire(mots)
 
 case MODE
 
-when 'player'
-  mot = LE_MOT || mots.sample
-  mots_proposables = dictionnaire[mot.size][mot[0]]
-
-  player_run(mot, mots_proposables)
-
 when 'sutom'
   puts "Grille ##{JOUR_SUTOM} de SUTOM"
   mot = URI.parse("https://sutom.nocle.fr/mots/#{JOUR_SUTOM}.txt").read
@@ -43,6 +37,12 @@ when 'sutom'
 
   puts ligne_tableau_sutom(JOUR_SUTOM, mot, propositions_h, resultats_bots)
 
+when 'player'
+  mot = LE_MOT || mots.sample
+  mots_proposables = dictionnaire[mot.size][mot[0]]
+
+  player_run(mot, mots_proposables)
+
 when 'bot'
   begin
     bot = method("bot_v#{VERSION_BOT}".to_sym)
@@ -53,12 +53,14 @@ when 'bot'
   end
 
   mot = LE_MOT || mots.sample
-  mots_proposables = dictionnaire[mot.size][mot[0]]
 
-  propositions, essais = bot_run(mot, mots_proposables, bot)
+  matrice = JSON.load_file("data/#{mot.size}#{mot[0]}/matrice.json")
+  mots_proposables = File.readlines("data/#{mot.size}#{mot[0]}/liste.txt", chomp: true)
+
+  propositions = bot_run(mot, mots_proposables, matrice, bot)
 
   afficher(propositions)
-  puts "Trouvé en #{essais} tentatives."
+  puts "Trouvé en #{propositions.size} tentatives."
 
 when 'benchmark'
   # OPTIM: garder en mémoire les mots_proposables écartés

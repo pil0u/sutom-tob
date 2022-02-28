@@ -3,7 +3,8 @@
 require 'set'
 require_relative 'utils'
 
-def bot_run(le_mot, les_mots_proposables, le_bot, limite = nil)
+def bot_run(le_mot, les_mots_proposables, la_matrice, le_bot, limite = nil)
+  idx_du_mot = les_mots_proposables.index(le_mot)
   taille_du_mot = le_mot.size
   debut_du_mot = le_mot[0]
 
@@ -12,7 +13,6 @@ def bot_run(le_mot, les_mots_proposables, le_bot, limite = nil)
   compteur_exact = Set.new
 
   propositions = {}
-  essais = 1
 
   loop do
     proposition = le_bot.call(les_mots_proposables, propositions, positions, compteur, compteur_exact)
@@ -22,52 +22,34 @@ def bot_run(le_mot, les_mots_proposables, le_bot, limite = nil)
       break
     end
 
-    # Mise à jour des informations et codage du résultat
-    # OPTIM : enlever le codage du résultat (inutile en benchmark)
-    code = Array.new(proposition.size) { '🟦' }
-    lettres_du_mot = le_mot.chars
+    idx_proposition = les_mots_proposables.index(proposition)
+    trinaire_decimal = la_matrice[idx_du_mot][idx_proposition]
+    trinaire = trinaire_pur(trinaire_decimal, taille_du_mot)
+
     tmp_compteur = Hash.new(0)
 
-    # 1ère passe sur toutes les lettres pour trouver les bien placées
-    indices_restants = []
-
-    proposition.each_char.with_index do |lettre, idx|
-      if lettre == lettres_du_mot[idx]
-        code[idx] = '🟥'
-        lettres_du_mot[idx] = '#'
-
-        positions[idx] = Set[lettre] if positions[idx].size > 1
-        tmp_compteur[lettre] += 1
-      else
-        indices_restants << idx
-      end
-    end
-
-    # 2ème passe sur les lettres autres que bien placées
-    indices_restants.each do |idx|
+    trinaire.each_with_index do |code, idx|
       lettre = proposition[idx]
 
-      if lettres_du_mot.include?(lettre)
-        code[idx] = '🟡'
-        lettres_du_mot[lettres_du_mot.index(lettre)] = '#'
-
+      case code
+      when 2
+        positions[idx] = Set[lettre] if positions[idx].size > 1
+        tmp_compteur[lettre] += 1
+      when 1
         positions[idx].delete(lettre)
         tmp_compteur[lettre] += 1
-      else
-        code[idx] = '🟦'
-
+      when 0
         positions[idx].delete(lettre)
         tmp_compteur[lettre] += 0
         compteur_exact.add(lettre)
       end
     end
 
-    propositions[proposition] = code.join
     compteur = compteur.merge(tmp_compteur) { |_k, v1, v2| [v1, v2].max }
+    propositions[proposition] = codage(trinaire_pur)
 
-    essais += 1
-    break if limite && essais == limite
+    break if limite && propositions.size == limite
   end
 
-  [propositions, essais]
+  propositions
 end
