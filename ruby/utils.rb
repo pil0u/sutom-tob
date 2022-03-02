@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'base64'
+
 def initialiser_dictionnaire(liste_mots)
   dict = {}
 
@@ -70,6 +72,16 @@ def resultat_code(proposition, le_mot, bien_placees)
   end
 
   code_resultat.join
+end
+
+def uri_mot_sutom(jour)
+  origine = Date.new(2022, 1, 7)
+  aujourdhui = origine + jour
+
+  s = "34ccc522-c264-4e51-b293-fd5bd60ef7aa-#{aujourdhui}"
+  s_enc = Base64.encode64(s).gsub("\n", '')
+
+  "https://sutom.nocle.fr/mots/#{s_enc}.txt"
 end
 
 def ligne_tableau_sutom(jour, mot, propositions_h, resultats_bots)

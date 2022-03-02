@@ -18,7 +18,7 @@ case MODE
 
 when 'sutom'
   puts "Grille ##{JOUR_SUTOM} de SUTOM"
-  mot = URI.parse("https://sutom.nocle.fr/mots/#{JOUR_SUTOM}.txt").read
+  mot = URI.parse(uri_mot_sutom(JOUR_SUTOM)).read
 
   matrice = JSON.load_file("data/#{mot.size}#{mot[0]}/matrice.json")
   mots_proposables = File.readlines("data/#{mot.size}#{mot[0]}/liste.txt", chomp: true)
