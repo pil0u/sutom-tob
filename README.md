@@ -2,7 +2,7 @@
 
 Un solveur pour le jeu [SUTOM](https://sutom.nocle.fr/), une [adaptation libre]((https://framagit.org/JonathanMM/sutom/)) du jeu Motus.
 
-En cours de développement [sur Twitch](https://www.twitch.tv/ze_n0ob) (les lundis/mardis soirs) et [Discord](https://discord.gg/wSdRCnpEuq).  
+En cours de développement [sur Twitch](https://www.twitch.tv/ze_n0ob) et [Discord](https://discord.gg/wSdRCnpEuq).  
 Pour s'entraîner au Motus, j'ai mis en ligne la version "joueur humain" du code. [Plus d'infos](#sentrainer-au-motus-en-ligne)
 
 - [Introduction](#introduction)
@@ -44,8 +44,47 @@ Les scores sont en **gras\*** avec astérisque si le solveur a battu l'humain (v
 
 | Jour | Vainqueur | Mot | Performance humaine | v1 | v2 | v3 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| 093 | 🕊️ | <span title="SENATRICE">*caché*</span> | 🟥🟦🟦🟡🟡🟡🟡🟡🟦<br>🟥🟡🟥🟦🟥🟦🟥🟡🟥<br>🟥🟥🟥🟥🟥🟥🟥🟥🟥 | 8 | 3 | 3 |
+| 092 | 🕊️ | <span title="ANTIVOL">*caché*</span> | 🟥🟦🟦🟡🟦🟡🟦<br>🟥🟡🟡🟦🟡🟦🟦<br>🟥🟥🟥🟥🟥🟥🟥 | 3 | 4 | 3 |
+| 091 | ❓ | *À résoudre* | **À résoudre** | 9 | 3 | 3 |
+| 090 | ❓ | *À résoudre* | **À résoudre** | 11 | 4 | 2 |
+| 089 | 🕊️ | <span title="MULTIVERS">*caché*</span> | 🟥🟦🟦🟦🟥🟦🟥🟥🟦<br>🟥🟦🟦🟡🟡🟦🟡🟡🟥<br>🟥🟥🟥🟥🟥🟥🟥🟥🟥 | 5 | 4 | 3 |
+| 088 | 💪 | <span title="BIGOUDI">*caché*</span> | 🟥🟥🟦🟥🟦🟡🟦<br>🟥🟥🟥🟥🟥🟥🟥 | 3 | 3 | 3 |
+| 087 | 💪 | <span title="FAVORITE">*caché*</span> | 🟥🟡🟦🟡🟡🟥🟦🟥<br>🟥🟥🟥🟥🟥🟥🟥🟥 | 4 | 3 | 3 |
+| 086 | 🤖 | <span title="EXPERT">*caché*</span> | 🟥🟦🟡🟦🟦🟡<br>🟥🟡🟡🟦🟦🟦<br>🟥🟡🟦🟡🟡🟡<br>🟥🟥🟥🟥🟥🟥 | 6 | 4 | **3\*** |
+| 085 | 🕊️ | <span title="SOMNOLER">*caché*</span> | 🟥🟥🟦🟦🟦🟦🟦🟡<br>🟥🟥🟡🟦🟡🟦🟥🟦<br>🟥🟥🟥🟥🟥🟥🟥🟥 | 6 | 3 | 3 |
+| 084 | 💪 | <span title="CABARET">*caché*</span> | 🟥🟥🟦🟦🟡🟡🟡<br>🟥🟥🟥🟥🟥🟥🟥 | 3 | 3 | 3 |
+| 083 | 💪 | <span title="MIOCHE">*caché*</span> | 🟥🟡🟦🟥🟥🟥<br>🟥🟥🟥🟥🟥🟥 | 8 | 3 | 4 |
+| 082 | 🕊️ | <span title="PARFAIT">*caché*</span> | 🟥🟡🟦🟦🟦🟦🟦<br>🟥🟥🟥🟡🟡🟡🟦<br>🟥🟥🟥🟥🟥🟥🟥 | 6 | 4 | 3 |
+| 081 | ❓ | *À résoudre* | **À résoudre** | 5 | 3 | 3 |
+| 080 | 💪 | <span title="GORGEE">*caché*</span> | 🟥🟥🟦🟦🟦🟥<br>🟥🟥🟥🟥🟥🟥 | 3 | 3 | 4 |
+| 079 | 💪 | <span title="ACTRICE">*caché*</span> | 🟥🟡🟡🟦🟦🟡🟡<br>🟥🟥🟥🟡🟦🟡🟡<br>🟥🟥🟥🟥🟥🟥🟥 | 4 | 4 | 4 |
+| 078 | 💪 | <span title="FAMEUX">*caché*</span> | 🟥🟦🟦🟡🟦🟡<br>🟥🟥🟦🟥🟥🟦<br>🟥🟥🟥🟥🟥🟥 | 5 | 4 | 4 |
+| 077 | 💪 | <span title="SUSPENSE">*caché*</span> | 🟥🟦🟡🟦🟦🟦🟡🟦<br>🟥🟦🟦🟡🟥🟥🟦🟥<br>🟥🟥🟥🟥🟥🟥🟥🟥 | 6 | 4 | 4 |
+| 076 | 🕊️ | <span title="TRAVERS">*caché*</span> | 🟥🟦🟦🟦🟦🟡🟥<br>🟥🟡🟦🟡🟦🟦🟥<br>🟥🟥🟥🟦🟥🟥🟥<br>🟥🟥🟥🟥🟥🟥🟥 | 14 | 5 | 4 |
+| 075 | 🕊️ | <span title="COURSIER">*caché*</span> | 🟥🟥🟥🟦🟦🟦🟦🟡<br>🟥🟥🟥🟡🟦🟦🟦🟦<br>🟥🟥🟥🟥🟥🟥🟥🟥 | 5 | 3 | 4 |
+| 074 | 💪 | <span title="PENALTY">*caché*</span> | 🟥🟦🟥🟥🟦🟦🟡<br>🟥🟥🟥🟥🟥🟥🟥 | 9 | 3 | 3 |
+| 073 | 🤖 | <span title="DIRECT">*caché*</span> | 🟥🟦🟦🟡🟡🟦<br>🟥🟡🟡🟡🟦🟦<br>🟥🟥🟥🟥🟥🟥 | 6 | **2\*** | 3 |
+| 072 | 💪 | <span title="ARNAQUE">*caché*</span> | 🟥🟡🟡🟦🟦🟦🟦<br>🟥🟡🟦🟦🟡🟡🟦<br>🟥🟥🟥🟥🟥🟥🟥 | 6 | 4 | 4 |
+| 071 | 💪 | <span title="RIGOLOTE">*caché*</span> | 🟥🟡🟦🟦🟡🟡🟦🟥<br>🟥🟥🟥🟥🟥🟥🟥🟥 | 9 | 4 | 4 |
+| 070 | 💪 | <span title="LONGTEMPS">*caché*</span> | 🟥🟥🟦🟡🟡🟦🟦🟦🟥<br>🟥🟥🟥🟥🟥🟥🟥🟥🟥 | 4 | 3 | 4 |
+| 069 | 🤖 | <span title="MUSEUM">*caché*</span> | 🟥🟦🟡🟦🟦🟦<br>🟥🟡🟦🟡🟡🟦<br>🟥🟥🟦🟥🟦🟡<br>🟥🟥🟥🟥🟦🟡<br>🟥🟥🟥🟥🟥🟥 | **4\*** | **4\*** | **4\*** |
+| 068 | ❓ | *À résoudre* | **À résoudre** | 5 | 4 | 3 |
+| 067 | ❓ | *À résoudre* | **À résoudre** | 7 | 5 | 2 |
+| 066 | 🕊️ | <span title="DEGOUTE">*caché*</span> | 🟥🟦🟦🟡🟡🟦🟦<br>🟥🟡🟡🟦🟦🟡🟦<br>🟥🟥🟥🟥🟥🟥🟥 | 5 | 3 | 3 |
+| 065 | 🤖 | <span title="BICLOU">*caché*</span> | 🟥🟦🟡🟦🟦🟦<br>🟥🟡🟡🟦🟡🟦<br>🟥🟥🟦🟡🟡🟦<br>🟥🟥🟥🟥🟥🟥 | 3 | **2\*** | 3 |
+| 064 | 🕊️ | <span title="LABORIEUX">*caché*</span> | 🟥🟡🟦🟥🟦🟡🟡🟡🟦<br>🟥🟥🟥🟥🟥🟥🟥🟥🟥 | 2 | 2 | 3 |
+| 063 | 🕊️ | <span title="AFFILEE">*caché*</span> | 🟥🟦🟦🟥🟦🟦🟥<br>🟥🟦🟦🟥🟦🟥🟥<br>🟥🟥🟥🟥🟦🟥🟥<br>🟥🟥🟥🟥🟥🟥🟥 | 5 | 4 | 4 |
+| 062 | 🤖 | <span title="GIRAFE">*caché*</span> | 🟥🟦🟦🟦🟡🟡<br>🟥🟡🟡🟦🟥🟥<br>🟥🟥🟥🟥🟥🟥 | 4 | **2\*** | 4 |
+| 061 | 🤖 | <span title="COHABITER">*caché*</span> | 🟥🟦🟡🟡🟡🟦🟦🟡🟡<br>🟥🟥🟦🟥🟡🟥🟦🟦🟡<br>🟥🟥🟥🟥🟥🟥🟥🟥🟥 | 5 | **2\*** | 3 |
+| 060 | 🕊️ | <span title="EUREKA">*caché*</span> | 🟥🟦🟦🟦🟦🟡<br>🟥🟦🟦🟥🟦🟦<br>🟥🟦🟥🟥🟡🟦<br>🟥🟥🟥🟥🟥🟥 | 8 | 5 | 4 |
+| 059 | 🕊️ | <span title="BANALITE">*caché*</span> | 🟥🟦🟦🟦🟡🟦🟡🟡<br>🟥🟥🟡🟡🟦🟡🟡🟦<br>🟥🟥🟥🟥🟥🟥🟥🟥 | 7 | 3 | 3 |
+| 058 | 💪 | <span title="SOIGNANTE">*caché*</span> | 🟥🟥🟦🟦🟡🟥🟥🟥🟥<br>🟥🟥🟥🟥🟥🟥🟥🟥🟥 | 3 | 3 | 4 |
+| 057 | 💪 | <span title="PILULE">*caché*</span> | 🟥🟦🟡🟡🟡🟥<br>🟥🟥🟥🟥🟥🟥 | 6 | 3 | 3 |
+| 056 | 🕊️ | <span title="MINUSCULE">*caché*</span> | 🟥🟦🟦🟦🟡🟦🟦🟦🟥<br>🟥🟦🟦🟦🟡🟦🟦🟥🟥<br>🟥🟥🟥🟥🟥🟥🟥🟥🟥 | 4 | 3 | 3 |
+| 055 | 🕊️ | <span title="TUNNEL">*caché*</span> | 🟥🟦🟡🟦🟦🟡<br>🟥🟦🟦🟡🟥🟦<br>🟥🟥🟥🟥🟥🟥 | 9 | 3 | 3 |
 | 054 | 🕊️ | <span title="CYLINDRE">*caché*</span> | 🟥🟦🟡🟦🟡🟦🟡🟦<br>🟥🟦🟡🟡🟦🟦🟥🟥<br>🟥🟥🟥🟥🟥🟥🟥🟥 | 6 | 3 | 3 |
-| 053 | 🤖 | <span title="ADVERBE">*caché*</span> | 🟥🟦🟦🟦🟡🟦🟦<br>🟥🟡🟡🟦🟦🟡🟦<br>🟥🟦🟦🟥🟥🟦🟥<br>🟥🟦🟦🟥🟥🟦🟥<br>🟥🟥🟥🟥🟥🟥🟥 | 5 | 3 | 3 |
+| 053 | 🤖 | <span title="ADVERBE">*caché*</span> | 🟥🟦🟦🟦🟡🟦🟦<br>🟥🟡🟡🟦🟦🟡🟦<br>🟥🟦🟦🟥🟥🟦🟥<br>🟥🟦🟦🟥🟥🟦🟥<br>🟥🟥🟥🟥🟥🟥🟥 | 5 | **3\*** | **3\*** |
 | 052 | 🕊️ | <span title="LEGUME">*caché*</span> | 🟥🟡🟦🟦🟦🟥<br>🟥🟦🟦🟡🟡🟥<br>🟥🟥🟥🟥🟥🟥 | 6 | 4 | 3 |
 | 051 | 💪 | <span title="BRILLANT">*caché*</span> | 🟥🟡🟡🟦🟦🟦🟥🟥<br>🟥🟥🟥🟥🟥🟥🟥🟥 | 6 | 5 | 4 |
 | 050 | 🕊️ | <span title="GENCIVE">*caché*</span> | 🟥🟦🟦🟦🟦🟡🟦<br>🟥🟥🟥🟡🟦🟦🟦<br>🟥🟥🟥🟥🟥🟥🟥 | 6 | 3 | 3 |
@@ -70,7 +109,7 @@ Les scores sont en **gras\*** avec astérisque si le solveur a battu l'humain (v
 | 031 | 🤖 | <span title="PARAPLUIE">*caché*</span> | 🟥🟡🟦🟡🟡🟥🟦🟦🟥<br>🟥🟡🟦🟦🟡🟥🟦🟦🟥<br>🟥🟥🟥🟥🟥🟥🟥🟥🟥 | 4 | **2\*** | 3 |
 | 030 | 💪 | <span title="SAPRISTI">*caché*</span> | 🟥🟥🟦🟦🟡🟦🟦🟦<br>🟥🟥🟥🟥🟥🟥🟥🟥 | 5 | 3 | 4 |
 | 029 | 🤖 | <span title="PREJUGE">*caché*</span> | 🟥🟦🟦🟡🟡🟦🟥<br>🟥🟦🟡🟡🟦🟦🟥<br>🟥🟥🟥🟦🟥🟦🟥<br>🟥🟥🟥🟥🟥🟥🟥 | 5 | **3\*** | **3\*** |
-| 028<br>(*Twitch  only*) | 🕊️ | <span title="GADGET">*caché*</span> | 🟥🟥🟦🟦🟦🟦<br>🟥🟥🟡🟡🟦🟦<br>🟥🟥🟥🟥🟥🟥 | 3 | 3 | 4 |
+| 028<br>(*Twitch*) | 🕊️ | <span title="GADGET">*caché*</span> | 🟥🟥🟦🟦🟦🟦<br>🟥🟥🟡🟡🟦🟦<br>🟥🟥🟥🟥🟥🟥 | 3 | 3 | 4 |
 | 027 | 💪 | <span title="TOUBIB">*caché*</span> | 🟥🟦🟥🟦🟥🟦<br>🟥🟥🟥🟥🟥🟥 | 4 | 3 | 3 |
 | 026 | 🕊️ | <span title="BOURRIN">*caché*</span> | 🟥🟦🟡🟡🟦🟦🟦<br>🟥🟦🟡🟡🟦🟦🟡<br>🟥🟥🟥🟥🟥🟥🟥 | 8 | 4 | 3 |
 | 025 | 🕊️ | <span title="RACLETTE">*caché*</span> | 🟥🟦🟦🟦🟡🟡🟦🟥<br>🟥🟡🟦🟡🟦🟡🟦🟥<br>🟥🟥🟥🟥🟥🟥🟥🟥 | 5 | 4 | 3 |
@@ -78,7 +117,8 @@ Les scores sont en **gras\*** avec astérisque si le solveur a battu l'humain (v
 | 023 | 🕊️ | <span title="GRENIER">*caché*</span> | 🟥🟦🟡🟦🟡🟦🟦<br>🟥🟥🟡🟦🟦🟦🟡<br>🟥🟥🟥🟥🟥🟥🟥 | 3 | 3 | 3 |
 | 022 | 🤖 | <span title="AIRBAG">*caché*</span> | 🟥🟦🟦🟦🟦🟦<br>🟥🟡🟥🟦🟦🟡<br>🟥🟥🟥🟥🟥🟥 | 9 | **2\*** | 3 |
 | 021 | 🤖 | <span title="SUPPLICE">*caché*</span> | 🟥🟦🟥🟦🟡🟦🟦🟦<br>🟥🟥🟥🟥🟦🟦🟡🟦<br>🟥🟥🟥🟥🟥🟥🟦🟥<br>🟥🟥🟥🟥🟥🟥🟥🟥 | 6 | **3\*** | **3\*** |
-| ... | ... | ... | ... | ... | ... | ... |
+| 020 | ❓ | *À résoudre* | **À résoudre** | 4 | 3 | 3 |
+| 019 | ❓ | *À résoudre* | **À résoudre** | 5 | 4 | 3 |
 | 018<br>(*Twitch*) | 💪 | <span title="REMPART">*caché*</span> | 🟥🟡🟦🟦🟦🟡🟡<br>🟥🟥🟥🟥🟥🟥🟥 | 11 | 4 | 3 |
 | 017<br>(*Twitch*) | 💪 | <span title="LUCIOLE">*caché*</span> | 🟥🟦🟦🟦🟦🟦🟥<br>🟥🟥🟥🟥🟥🟥🟥 | 6 | 4 | 4 |
 | 016<br>(*Twitch*) | 🕊️ | <span title="PETUNIA">*caché*</span> | 🟥🟥🟡🟡🟦🟦🟦<br>🟥🟥🟦🟡🟦🟡🟡<br>🟥🟥🟥🟥🟥🟥🟥 | 5 | 3 | 3 |
@@ -96,13 +136,13 @@ Les scores sont en **gras\*** avec astérisque si le solveur a battu l'humain (v
 | 004<br>(*Twitch*) | 🤖 | <span title="VALSEURS">*caché*</span> | 🟥🟥🟡🟦🟥🟦🟦🟥<br>🟥🟥🟦🟡🟥🟡🟦🟥<br>🟥🟥🟦🟦🟥🟥🟥🟥<br>🟥🟥🟥🟥🟥🟥🟥🟥 | 5 | **3\*** | **3\*** |
 | 003<br>(*Twitch*) | 🕊️ | <span title="GLOBALES">*caché*</span> | 🟥🟡🟦🟦🟦🟡🟦🟦<br>🟥🟡🟡🟡🟡🟦🟡🟡<br>🟥🟥🟥🟥🟥🟥🟥🟥 | 7 | 3 | 4 |
 | 002<br>(*Twitch*) | 🤖 | <span title="PELTAS">*caché*</span> | 🟥🟦🟡🟡🟦🟦<br>🟥🟦🟦🟥🟥🟥<br>🟥🟥🟦🟥🟥🟥<br>🟥🟥🟥🟥🟥🟥 | 11 | 4 | **2\*** |
-| 001<br>(*Twitch*) | 🤖 | <span title="AVORTAI">*caché*</span> | 🟥🟦🟡🟦🟡🟦🟦<br>🟥🟦🟦🟡🟡🟡🟦<br>🟥🟥🟥🟥🟥🟦🟦<br>🟥🟥🟥🟥🟥🟥🟥 | 8 | 4 | **3\*** |
+| 001<br>(*Twitch*) | 🕊️ | <span title="AVORTAI">*caché*</span> | 🟥🟦🟡🟦🟡🟦🟦<br>🟥🟦🟦🟡🟡🟡🟦<br>🟥🟥🟥🟥🟥🟦🟦 | 8 | 4 | 3 |
 
 ### _Deus ex machina_?
 
-| 💪 | 🤖 | 🕊️ |
-| :---: | :---: | :---: |
-| 17 | 14 | 21 |
+| 💪 | 🤖 | 🕊️ | ❓ |
+| :---: | :---: | :---: | :---: |
+| 31 | 19 | 36 | 7 |
 
 
 ## Benchmark
