@@ -1,8 +1,11 @@
 # frozen_string_literal: true
 
-MODE = 'sutom' # ['sutom', 'player', 'bot', 'benchmark']
+MODE = 'sutom_full' # ['sutom', 'sutom_full', 'player', 'bot', 'benchmark']
 
 # sutom
+CHEMIN_RESULTATS_HUMAINS = 'data/resultats_humains.txt'
+CHEMIN_RESULTATS_ROBOTS = 'data/resultats_robots.csv'
+CHEMIN_RESULTATS_MARKDOWN = 'drafts/README.md'
 DERNIERE_VERSION_BOT = 3
 JOUR_SUTOM = 54
 

@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'open-uri'
-
 require_relative 'bot'
 require_relative 'bots/v0'
 require_relative 'bots/v1'
@@ -9,6 +7,7 @@ require_relative 'bots/v2'
 require_relative 'bots/v3'
 require_relative 'config'
 require_relative 'player'
+require_relative 'sutom'
 require_relative 'utils'
 
 mots = File.readlines('data/mots.txt', chomp: true)
@@ -18,7 +17,7 @@ case MODE
 
 when 'sutom'
   puts "Grille ##{JOUR_SUTOM} de SUTOM"
-  mot = URI.parse(uri_mot_sutom(JOUR_SUTOM)).read
+  mot = mot_sutom(JOUR_SUTOM)
 
   matrice = JSON.load_file("data/#{mot.size}#{mot[0]}/matrice.json")
   mots_proposables = File.readlines("data/#{mot.size}#{mot[0]}/liste.txt", chomp: true)
@@ -38,6 +37,19 @@ when 'sutom'
   end
 
   puts ligne_tableau_sutom(JOUR_SUTOM, mot, propositions_h, resultats_bots)
+
+when 'sutom_full'
+  sutom = Sutom.new
+  lignes_readme, scores = sutom.construire_readme
+
+  File.open(CHEMIN_RESULTATS_MARKDOWN, 'w') do |f|
+    f.puts(lignes_readme.reverse)
+
+    f.puts("\n| 💪 | 🤖 | 🕊️ | ❓ |\n| :---: | :---: | :---: | :---: |\n")
+    f.puts("| #{scores['💪']} | #{scores['🤖']} | #{scores['🕊️']} | #{scores['❓']} |")
+  end
+
+  puts "Résultats générés dans #{CHEMIN_RESULTATS_MARKDOWN}"
 
 when 'player'
   mot = LE_MOT || mots.sample

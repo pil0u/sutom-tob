@@ -16,3 +16,6 @@ Metrics/MethodLength:
 
 Metrics/PerceivedComplexity:
   Enabled: false
+
+Style/Documentation:
+  Enabled: false
