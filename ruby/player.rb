@@ -22,7 +22,7 @@ def player_run(le_mot, les_mots_proposables)
     # Possibilité de quitter à tout moment en tapant "q"
     if proposition == 'Q'
       puts "Le mot était #{le_mot}"
-      return
+      return propositions
     end
 
     # La proposition est-elle valide ?

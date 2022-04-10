@@ -92,7 +92,7 @@ def ligne_tableau_sutom(jour, mot, propositions_h, resultats_bots)
   emoji = '🕊️' if meilleur_bot == essais_h
   emoji = '💪' if meilleur_bot > essais_h
 
-  f_jour = "#{format('%03d', jour)}<br>(*Twitch*)"
+  f_jour = "#{format('%03d', jour)}" # <br>(*Twitch*)
   f_spoiler = "<span title=\"#{mot}\">*caché*</span>"
   f_propositions_h = propositions_h.values.join('<br>')
   f_resultats_bots = resultats_bots.join(' | ')
