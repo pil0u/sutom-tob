@@ -136,13 +136,13 @@ Les scores sont en **gras\*** avec astérisque si le solveur a battu l'humain (v
 | 004<br>(*Twitch*) | 🤖 | <span title="VALSEURS">*caché*</span> | 🟥🟥🟡🟦🟥🟦🟦🟥<br>🟥🟥🟦🟡🟥🟡🟦🟥<br>🟥🟥🟦🟦🟥🟥🟥🟥<br>🟥🟥🟥🟥🟥🟥🟥🟥 | 5 | 3 | 3 | **2\*** |
 | 003<br>(*Twitch*) | 🕊️ | <span title="GLOBALES">*caché*</span> | 🟥🟡🟦🟦🟦🟡🟦🟦<br>🟥🟡🟡🟡🟡🟦🟡🟡<br>🟥🟥🟥🟥🟥🟥🟥🟥 | 7 | 3 | 4 | 5 |
 | 002<br>(*Twitch*) | 🤖 | <span title="PELTAS">*caché*</span> | 🟥🟦🟡🟡🟦🟦<br>🟥🟦🟦🟥🟥🟥<br>🟥🟥🟦🟥🟥🟥<br>🟥🟥🟥🟥🟥🟥 | 11 | 4 | **2\*** | **2\*** |
-| 001<br>(*Twitch*) | 🕊️ | <span title="AVORTAI">*caché*</span> | 🟥🟦🟡🟦🟡🟦🟦<br>🟥🟦🟦🟡🟡🟡🟦<br>🟥🟥🟥🟥🟥🟦🟦 | 8 | 4 | 3 | 3 |
+| 001<br>(*Twitch*) | 🤖 | <span title="AVORTAI">*caché*</span> | 🟥🟦🟡🟦🟡🟦🟦<br>🟥🟦🟦🟡🟡🟡🟦<br>🟥🟥🟥🟥🟥🟦🟦<br>🟥🟥🟥🟥🟥🟥🟥 | 8 | 4 | **3\*** | **3\*** |
 
 ### _Deus ex machina_?
 
 | 💪 | 🤖 | 🕊️ | ❓ |
 | :---: | :---: | :---: | :---: |
-| 20 | 26 | 40 | 7 |
+| 20 | 27 | 39 | 7 |
 
 
 ## Benchmark
@@ -173,7 +173,7 @@ Les scores sont en **gras\*** avec astérisque si le solveur a battu l'humain (v
 ## Prochaines étapes
 
 - [x] Modifier le `run` des bots (et du player) pour charger la matrice au début : plus besoin de calculer !
-- [ ] Créer une version qui utilise les calculs d'entropie
+- [x] Créer une version qui utilise les calculs d'entropie
 - [ ] Benchmarker _efficacement_ (mémoïsation ?) les différentes versions du solveur et archiver les résultats
 - [ ] Compléter la partie Usage du README
 - [ ] Stocker les résultats des benchmarks dans des fichiers (YAML, JSON...) ([exemple](https://stackoverflow.com/questions/30718214/saving-hashes-to-file-on-ruby))
