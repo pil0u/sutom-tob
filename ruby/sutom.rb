@@ -76,9 +76,9 @@ class Sutom
         next
       end
 
+      # Sinon, on refait tout
       puts "Mise à jour (#{jour})"
 
-      # Sinon, on refait tout
       mot = mot_sutom(jour)
       mots_proposables = File.readlines("data/#{mot.size}#{mot[0]}/liste.txt", chomp: true)
       matrice = JSON.load_file("data/#{mot.size}#{mot[0]}/matrice.json")

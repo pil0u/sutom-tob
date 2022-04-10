@@ -6,7 +6,9 @@ MODE = 'sutom_full' # ['sutom', 'sutom_full', 'player', 'bot', 'benchmark']
 CHEMIN_RESULTATS_HUMAINS = 'data/resultats_humains.txt'
 CHEMIN_RESULTATS_ROBOTS = 'data/resultats_robots.csv'
 CHEMIN_RESULTATS_MARKDOWN = 'drafts/README.md'
-DERNIERE_VERSION_BOT = 3
+
+DERNIERE_VERSION_BOT = 4
+
 JOUR_SUTOM = 54
 
 # player | bot
