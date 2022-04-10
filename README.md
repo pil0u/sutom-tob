@@ -42,8 +42,8 @@ Historique de mes propres parties sur SUTOM. Certains jours ont été réalisés
 
 Les scores sont en **gras\*** avec astérisque si le solveur a battu l'humain (voir le [score final](#deus-ex-machina))
 
-| Jour | Vainqueur | Mot | Performance humaine | v1 | v2 | v3 |
-| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Jour | Vainqueur | Mot | Performance humaine | v1 | v2 | v3 | v4 |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | 093 | 🕊️ | <span title="SENATRICE">*caché*</span> | 🟥🟦🟦🟡🟡🟡🟡🟡🟦<br>🟥🟡🟥🟦🟥🟦🟥🟡🟥<br>🟥🟥🟥🟥🟥🟥🟥🟥🟥 | 8 | 3 | 3 | 3 |
 | 092 | 🕊️ | <span title="ANTIVOL">*caché*</span> | 🟥🟦🟦🟡🟦🟡🟦<br>🟥🟡🟡🟦🟡🟦🟦<br>🟥🟥🟥🟥🟥🟥🟥 | 3 | 4 | 3 | 4 |
 | 091 | ❓ | *À résoudre* | **À résoudre** | 9 | 3 | 3 | 3 |
